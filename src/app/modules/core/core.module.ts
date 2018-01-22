@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { CoreComponent } from './components/core/core.component';
 import { RouterModule } from '@angular/router';
 
+import { CovalentLayoutModule } from '@covalent/core';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    CovalentLayoutModule
   ],
-  declarations: [CoreComponent]
+  declarations: [
+    CoreComponent
+  ]
 })
 export class CoreModule { }

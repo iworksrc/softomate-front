@@ -1,3 +1,36 @@
-<p>
-  person-list works!
-</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>List of invaited persons</mat-card-title>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <mat-list #person_list>
+      <mat-list-item *ngFor="let person of persons" >
+        <mat-icon mat-list-icon>person</mat-icon>
+        <h4 mat-line>{{person.firstName}} {{person.lastName}}</h4>
+        <p mat-line>{{person.birthDate}}</p>
+        <button mat-icon-button routerLink="{{person.id}}">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="removeFromList(person)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+
+    <!--<button mat-raised-button color="primary" routerLink="add">Add Person</button>-->
+    <!--<button mat-icon-button routerLink="add">-->
+      <!--<mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>-->
+    <!--</button>-->
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+  <mat-card-actions align="end">
+    <button mat-fab  routerLink="add">
+      <mat-icon>person_add</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
+
