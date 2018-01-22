@@ -9,13 +9,13 @@ const routes: Routes = [
     path: '',
     component: AssetsComponent,
     children: [
-      {path: '', redirectTo: 'personlist', pathMatch: 'full'},
+      {path: '', redirectTo: 'persons', pathMatch: 'full'},
       {
-        path: 'personlist',
+        path: 'persons',
         component: PersonListComponent
       },
       {
-        path: 'personlist/:operation',
+        path: 'persons/:operation',
         component: PersonEditComponent
       }
     ]
