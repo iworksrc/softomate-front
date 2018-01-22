@@ -21,7 +21,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
   imports: [
     BrowserModule,
     CoreModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {enableTracing: true}),
 
     CovalentLayoutModule,
     CovalentStepsModule,
